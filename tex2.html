@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>按钮示例</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            font-family: sans-serif;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        /* 绿色按钮样式 */
+        .btn-green {
+            background-color: #4CAF50;
+        }
+        .btn-green:hover {
+            background-color: #45a049;
+        }
+
+        /* 蓝色按钮样式 */
+        .btn-blue {
+            background-color: #008CBA;
+        }
+        .btn-blue:hover {
+            background-color: #007bb5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="button-container">
+        <button class="btn btn-green">绿色按钮</button>
+        <button class="btn btn-blue">蓝色按钮</button>
+    </div>
+
+</body>
+</html>
