@@ -1,0 +1,26 @@
+name: PostHog Traffic Bot
+
+on:
+  # 允许你手动点击运行
+  workflow_dispatch:
+  # 设置定时任务：每小时运行一次
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 安装测试工具
+        run: npm install playwright
+
+      - name: 运行机器人脚本
+        run: node bot.js
