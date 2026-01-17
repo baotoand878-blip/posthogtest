@@ -15,7 +15,7 @@ const { chromium } = require('playwright');
   // 3. 模拟点击按钮 (假设你的按钮文字是 "点我")
   // 如果你有多个按钮，可以多写几行不同的点击
   console.log('正在点击按钮...');
-  await page.click('绿色按钮'); 
+    await page.click('text=绿色按钮'); 
 
   // 4. 再等 1 秒，确保数据发给 PostHog
   await page.waitForTimeout(1000);
