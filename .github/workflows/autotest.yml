@@ -1,9 +1,7 @@
 name: PostHog Traffic Bot
 
 on:
-  # 允许你手动点击运行
   workflow_dispatch:
-  # 设置定时任务：每小时运行一次
   schedule:
     - cron: '0 * * * *'
 
@@ -19,8 +17,12 @@ jobs:
         with:
           node-version: '20'
 
-      - name: 安装测试工具
+      - name: 安装 Playwright
         run: npm install playwright
+
+      # ✨ 关键步骤：下载 Chromium 浏览器及其依赖库
+      - name: 安装浏览器内核
+        run: npx playwright install --with-deps chromium
 
       - name: 运行机器人脚本
         run: node bot.js
