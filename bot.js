@@ -6,7 +6,7 @@ const { chromium } = require('playwright');
 
   console.log('正在访问页面...');
   // 等待网络进入空闲状态
-  await page.goto('https://xn--6qqv7i14ofosyrb.github.io', { waitUntil: 'networkidle' }); 
+  await page.goto('https://baotoand878-blip.github.io/posthogtest/', { waitUntil: 'networkidle' }); 
 
   console.log('正在点击按钮...');
   await page.click('text=绿色按钮'); 
