@@ -9,7 +9,7 @@ const { chromium } = require('playwright');
   await page.goto('https://xn--6qqv7i14ofosyrb.github.io', { waitUntil: 'networkidle' }); 
 
   console.log('正在点击按钮...');
-  await page.click('button'); 
+  await page.click('text=绿色按钮'); 
 
   // ✨ 关键修改：点击后多等 5-10 秒，给 PostHog 留出发送数据的时间
   console.log('等待数据上传...');
