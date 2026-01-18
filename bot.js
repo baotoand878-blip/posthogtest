@@ -10,6 +10,7 @@ const { chromium } = require('playwright');
 
   console.log('正在点击按钮...');
   await page.click('text=绿色按钮'); 
+    await page.dblclick('text=蓝色按钮');
 
   // ✨ 关键修改：点击后多等 5-10 秒，给 PostHog 留出发送数据的时间
   console.log('等待数据上传...');
