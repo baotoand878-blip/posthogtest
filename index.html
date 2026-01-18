@@ -12,14 +12,20 @@
         defaults: '2025-11-30'
     });
 
+
+
+
+
+
+            
   posthog.onFeatureFlags(function() {
             // 获取当前用户被分配到了哪个变体
             const variant = posthog.getFeatureFlag('button-color-test');
             
-            if (variant === 'green') {
+            if (variant == 'green') {
               
                 document.querySelector('.btn-green').style.display = 'block';
-            } else if (variant === 'blue') {
+            } else if (variant == 'blue') {
                
                  document.querySelector('.btn-blue').style.display = 'block';
             } else {
@@ -88,6 +94,7 @@
 </body>
 
 </html>
+
 
 
 
