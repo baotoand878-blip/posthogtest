@@ -27,7 +27,7 @@ const { chromium } = require('playwright');
     if (isGreenVisible) await page.click('.btn-green');
     if (isBlueVisible) await page.click('.btn-blue');
 
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(7000);
     await browser.close();
   }
 })();
