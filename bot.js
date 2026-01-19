@@ -22,10 +22,19 @@ const { chromium } = require('playwright');
     const isBlueVisible = await page.isVisible('.btn-blue');
     
     console.log(`访客 ${i} 看到的按钮是: ${isGreenVisible ? '绿色' : '蓝色'}`);
-
-    // 模拟点击
+    const randomNumber = Math.floor(Math.random() * 10) + 1;
+    console.log("随机到的数字是:", randomNumber);
+      if (randomNumber >= 8) {
+         // 模拟点击
     if (isGreenVisible) await page.click('.btn-green');
+       
+    } else {
+         // 模拟点击
     if (isBlueVisible) await page.click('.btn-blue');
+       
+    }
+
+
 
     await page.waitForTimeout(7000);
     await browser.close();
