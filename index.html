@@ -17,8 +17,8 @@
 
 posthog.onFeatureFlags(function() {
     // feature flags should be available at this point
-    if (posthog.getFeatureFlag('button-color-test')  == 'green') {
-        console.log('green');
+    if (posthog.getFeatureFlag('button-color-test')  == 'control') {
+        console.log('control-green');
         document.querySelector('.btn-green').style.display = 'block';
     }else  if (posthog.getFeatureFlag('button-color-test')  == 'blue') {
         console.log('blue');
@@ -93,6 +93,7 @@ posthog.onFeatureFlags(function() {
 </body>
 
 </html>
+
 
 
 
