@@ -5,7 +5,7 @@ const { chromium } = require('playwright');
 
 (async () => {
   // 模拟 10 次访问
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 20; i++) {
     const browser = await chromium.launch();
     
     // 关键：每次创建一个全新的上下文（模拟新用户、清空 Cookie）
