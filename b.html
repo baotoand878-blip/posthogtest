@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20个按钮示例</title>
+   <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group identify setPersonProperties setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags resetGroups onFeatureFlags addFeatureFlagsHandler onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_jwO2qVSCl9nZ3K6zwyCWTTyYFCD6oKDKShxo7PAKsTT', {
+        api_host: 'https://us.i.posthog.com',
+        opt_out_useragent_filter: true ,
+        defaults: '2025-11-30'
+    });
+
+
+
+
+
+            
+
+
+
+            
+</script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 每行4个按钮 */
+            gap: 15px;
+            max-width: 600px;
+        }
+        button {
+            padding: 15px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr); /* 手机端每行2个 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 使用简单的循环思路，这里手动列出20个按钮 -->
+        <script>
+            const container = document.querySelector('.container');
+            for (let i = 1; i <= 20; i++) {
+                const btn = document.createElement('button');
+                btn.innerText = `按钮 ${i}`;
+                btn.onclick = () => alert(`你点击了第 ${i} 个按钮`);
+                container.appendChild(btn);
+            }
+        </script>
+    </div>
+
+</body>
+</html>
