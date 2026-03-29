@@ -24,7 +24,7 @@ const { chromium } = require('playwright');
     console.log(`访客 ${i} 看到的按钮是: ${isGreenVisible ? '绿色' : '蓝色'}`);
     const randomNumber = Math.floor(Math.random() * 10) + 1;
     console.log("随机到的数字是:", randomNumber);
-    await page.goto('https://baotoand878-blip.github.io/posthogtest/c.html');
+    
       if (randomNumber >= 7) {
          // 模拟点击
     if (isGreenVisible) await page.click('.btn-green');
@@ -34,7 +34,7 @@ const { chromium } = require('playwright');
     if (isBlueVisible) await page.click('.btn-blue');
        
     }
-
+await page.goto('https://baotoand878-blip.github.io/posthogtest/c.html');
 
 
     await page.waitForTimeout(7000);
